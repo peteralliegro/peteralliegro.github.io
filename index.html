@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peter Alliegro</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body style="background-color: black;">
+    <div class="pre-loader">
+        <div class="pre-load-progress"></div>
+    </div>
+   <div id="index-container">
+    <div class="3d-face">
+        <canvas class="webgl"></canvas>
+        <script type="module" src="index.js"></script>
+    </div>
+    <div class="links-container">
+        <h1 class="splash-link" >
+            <a href="works.html">
+            Works
+            </a>
+        </h1>
+        <h1 class="splash-link">
+            <a href="https://www.instagram.com/expert.knob.twiddler/">Instagram</a>
+        </h1>
+        <a href="mailto:peteralliegro@gmail.com?subject=I want to hire you">
+            <h1 class="splash-link">Contact</h1>
+        </a>
+    </div>
+    </div>
+    
+    <script>
+        const animated = document.querySelector('.pre-load-progress');
+
+        animated.addEventListener('animationend', () => {
+            document.getElementById("index-container").style.visibility="visible";
+            document.querySelector(".pre-loader").classList.add("disappear")
+            document.querySelector(".pre-load-progress").classList.add("disappear")
+        });
+    </script>
+</body>
+
+</html>

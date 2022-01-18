@@ -1,0 +1,254 @@
+a {
+    text-emphasis-color: inherit;
+    color: inherit;
+    text-decoration: none;
+}
+
+footer {
+    background-color: gainsboro;
+}
+
+canvas {
+    display: inline-block;
+    margin-top: 10px;
+    border: none;
+    background-color: white;
+}
+
+h2 {
+    font-family: sans-serif;
+    text-align: center;
+    color: white;
+}
+
+
+
+#index-container {
+    visibility: hidden;
+}
+
+#insta-logo {
+    height: 40px;
+}
+
+.links-container {
+    text-align: center;
+    position: static;
+}
+
+.splash-link {
+    margin: auto;
+    color: white;
+    text-align: center;
+    position: relative;
+    display: inline;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.world-loops {
+    width: 75%;
+    height: 75%;
+}
+
+.loop-container {
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.works-thumbs {
+    position: relative;
+    text-align: center;
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+}
+
+.works-thumbs p {
+    font-family: sans-serif;
+    font-size: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 150%);
+    color: white;
+    background-color: rgba(27, 27, 27, 0.74);
+
+
+}
+
+.works-thumbs:hover p {
+    top: 50%;
+    left: 50%;
+    animation: shift .5s normal forwards;
+
+
+}
+
+.works-names {
+    left: 25%;
+    color: white;
+    position: relative;
+    font-size: 40px;
+}
+
+.works-thumbs:hover>.works-names {
+    animation: textappear 1s normal forwards;
+    animation-iteration-count: 1;
+}
+
+@keyframes shift {
+
+    to {
+        transform: translate(-50%, -60%);
+    }
+
+}
+
+@keyframes textappear {
+    from {
+        top: 100%;
+    }
+
+    to {
+        top: 0%;
+    }
+}
+
+
+
+.works-container {
+    margin: 10%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 20px;
+    align-items: stretch;
+}
+
+.work-title {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.work-summary {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: white;
+    font-size: 25px;
+}
+
+.about-work-container {
+    text-align: center;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+#works-header {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: white;
+    margin-top: 5%;
+    font-size: 40px;
+}
+
+.header {
+    background-color: gray;
+}
+
+.header p {
+    font-family: sans-serif;
+    font-size: 25px;
+    color: white;
+    margin-left: 5%;
+}
+
+.pre-loader {
+    width: 300px;
+    height: 50px;
+    outline: white solid;
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    margin: -25px 0 0 -25px;
+    /* Apply negative top and left margins to truly center the element */
+}
+
+.pre-load-progress {
+    width: 0px;
+    height: 50px;
+    background-image: url(assets/preloaderface1.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: loading 2.5s normal forwards;
+}
+
+#github {
+    display: inline-block;
+
+}
+
+#github:hover {
+
+    animation: cool 1s normal forwards;
+}
+
+#github:hover #letters {
+    display: inline-block;
+    position: relative;
+    animation: swoosh 1s forwards;
+}
+
+#github:hover #letters2 {
+    display: inline-block;
+    position: relative;
+    animation: woosh 1s forwards;
+}
+
+
+.disappear {
+    animation: vanish .04s forwards;
+}
+
+@keyframes vanish {
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@keyframes loading {
+    to {
+        width: 300px;
+    }
+}
+
+@keyframes finished {
+    to {
+        opacity: 20%;
+    }
+}
+
+@keyframes cool {
+
+    to {
+        color: rgb(151, 255, 151);
+    }
+
+}
+
+@keyframes swoosh {
+    to {
+        transform: rotate(-4deg) translateY(15px);
+    }
+
+}
+
+@keyframes woosh {
+    to {
+        transform: rotate(5deg) translateY(-12px);
+    }
+
+}
