@@ -1,3 +1,8 @@
+@font-face {
+    font-family: glitch;
+    src: url("assets/Blockstepped.ttf")
+}
+
 a {
     text-emphasis-color: inherit;
     color: inherit;
@@ -21,7 +26,10 @@ h2 {
     color: white;
 }
 
-
+#vidulator {
+    object-fit: cover;
+    width: 100%;
+}
 
 #index-container {
     visibility: hidden;
@@ -43,6 +51,15 @@ h2 {
     position: relative;
     display: inline;
     font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(to right, #5191bdcc, #5191bdcc);
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    padding-bottom: 4px;
+    background-size: 0% 2px;
+}
+
+.splash-link:hover {
+    animation: underline 1s normal forwards;
 }
 
 .world-loops {
@@ -62,17 +79,20 @@ h2 {
     text-align: center;
     width: 250px;
     height: 250px;
+    max-width: 100%;
     overflow: hidden;
+
+
 }
 
 .works-thumbs p {
-    font-family: sans-serif;
+    font-family: glitch;
     font-size: 50px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, 150%);
-    color: white;
+    color: rgb(146, 197, 255);
     background-color: rgba(27, 27, 27, 0.74);
 
 
@@ -126,11 +146,13 @@ h2 {
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     grid-gap: 20px;
     align-items: stretch;
+
 }
+
 
 .work-title {
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Helvetica, sans-serif;
 }
 
 .work-summary {
@@ -165,20 +187,26 @@ h2 {
     margin-left: 5%;
 }
 
+.pre-load-container {
+    justify-content: center;
+}
+
 .pre-loader {
     width: 300px;
     height: 50px;
     outline: white solid;
     position: absolute;
-    top: 50%;
-    left: 40%;
+    top: 40%;
+    left: 40vw;
     margin: -25px 0 0 -25px;
+    max-width: 50%;
     /* Apply negative top and left margins to truly center the element */
 }
 
 .pre-load-progress {
     width: 0px;
     height: 50px;
+    max-width: 100%;
     background-image: url(assets/preloaderface1.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -187,6 +215,7 @@ h2 {
 
 #github {
     display: inline-block;
+
 
 }
 
@@ -199,6 +228,7 @@ h2 {
     display: inline-block;
     position: relative;
     animation: swoosh 1s forwards;
+
 }
 
 #github:hover #letters2 {
@@ -234,7 +264,7 @@ h2 {
 @keyframes cool {
 
     to {
-        color: rgb(151, 255, 151);
+        color: rgb(212, 0, 0);
     }
 
 }
@@ -246,9 +276,56 @@ h2 {
 
 }
 
+@keyframes out {
+
+    to {
+        transform: rotate(10deg) translateY(0px);
+    }
+
+}
+
 @keyframes woosh {
     to {
         transform: rotate(5deg) translateY(-12px);
+    }
+
+}
+
+@keyframes underline {
+
+    to {
+
+        background-size: 80% 2px;
+
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+    .works-thumbs {
+        width: 100%;
+    }
+
+    .work-summary {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .work-title {
+        font-size: 23px;
+    }
+
+    .about-work-container {
+        margin: 5%;
+    }
+
+    .world-loops {
+        width: 100%;
+    }
+
+    .pre-loader {
+        left: 30%;
+        width: 100%;
     }
 
 }

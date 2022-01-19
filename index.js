@@ -41,15 +41,20 @@ scene.add(camera)
 const renderer = new THREE.WebGL1Renderer({
     canvas: canvas
 })
-renderer.setSize(window.innerWidth, window.innerHeight / 1.5)
+
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 renderer.updateShadowMap.enabled = true
 renderer.gammaOutput = true
 renderer.render(scene, camera)
 
+function resizeCanvas() {
+    renderer.setSize(window.innerWidth, window.innerHeight / 1.5)
+}
+
 function animate() {
     requestAnimationFrame(animate)
     renderer.render(scene, camera)
+    resizeCanvas();
 
 }
 
