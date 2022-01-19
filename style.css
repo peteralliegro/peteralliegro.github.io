@@ -74,6 +74,11 @@ h2 {
     justify-content: center;
 }
 
+.safari-warning {
+    visibility: hidden;
+    color: white;
+}
+
 .works-thumbs {
     position: relative;
     text-align: center;
@@ -135,7 +140,6 @@ h2 {
         top: 0%;
     }
 }
-
 
 
 .works-container {
@@ -249,6 +253,12 @@ h2 {
     }
 }
 
+@keyframes safari-warning {
+    to {
+        visibility: visible;
+    }
+}
+
 @keyframes loading {
     to {
         width: 300px;
@@ -333,15 +343,10 @@ h2 {
 
 @media not all and (min-resolution:.001dpcm) {
     .works-thumbs {
-        color: #0000FF;
-        background-color: #CCCCCC;
+        background-image: linear-gradient(to right, #757575, #000000cc);
     }
 
-    .links-container {
-        background-color: beige;
-    }
-
-    body {
-        background-color: yellow;
+    .safari-warning {
+        animation: safari-warning;
     }
 }
