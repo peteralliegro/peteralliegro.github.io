@@ -92,11 +92,11 @@ h2 {
 
 .works-thumbs p {
     font-family: glitch;
-    font-size: 50px;
+    font-size: 40px;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, 150%);
+    transform: translate(-50%, 190%);
     color: rgb(146, 197, 255);
     background-color: rgba(27, 27, 27, 0.74);
 
@@ -343,9 +343,9 @@ h2 {
 
 
 @media not all and (min-resolution:.001dpcm) {
-    /* .works-thumbs {
+    .works-thumbs {
         background-image: linear-gradient(to right, #8f8f8f81, #ffffffcc);
-    }*/
+    }
 
     .safari-warning {
         animation: visible .2s forwards;
